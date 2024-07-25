@@ -1,0 +1,59 @@
+format = """
+[  ](fg:white)\
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$rust\
+$golang\
+$php\
+$time\
+\n$character"""
+
+[directory]
+style = "white"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = ""
+format = '[[ $symbol $branch ](fg:#769ff0)]($style)'
+
+[git_status]
+style = ""
+format = '[[($all_status$ahead_behind )](fg:#769ff0)]($style)'
+
+[nodejs]
+symbol = ""
+style = ""
+format = '[[ $symbol ($version) ](fg:#769ff0 )]($style)'
+
+[rust]
+symbol = ""
+style = ""
+format = '[[ $symbol ($version) ](fg:#769ff0 )]($style)'
+
+[golang]
+symbol = "ﳑ"
+style = ""
+format = '[[ $symbol ($version) ](fg:#769ff0 )]($style)'
+
+[php]
+symbol = ""
+style = ""
+format = '[[ $symbol ($version) ](fg:#769ff0 )]($style)'
+
+[time]
+disabled = true
+time_format = "%R" # Hour:Minute Format
+style = ""
+format = '[[  $time ](fg:#a0a9cb )]($style)'
+

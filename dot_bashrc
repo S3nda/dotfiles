@@ -1,0 +1,22 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fdp='yay -Syu'
+alias config='nvim ~/.config/hypr/hyprland.conf'
+alias typ='typioca'
+alias ping='gping'
+alias fastfetch='fastfetch --logo ~/.config/fastfetch/ascii.txt'
+alias ssh='kitty +kitten ssh'
+PS1='[\u@\h \W]\$ '
+
+eval "$(starship init bash)"
+eval "$(register-python-argcomplete pipx)"
+
+# Created by `pipx` on 2024-06-28 07:51:32
+export PATH="$PATH:/home/senda/.local/bin"
